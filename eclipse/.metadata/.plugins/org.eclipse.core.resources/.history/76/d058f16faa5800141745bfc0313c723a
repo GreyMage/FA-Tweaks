@@ -1,0 +1,51 @@
+package cades.fatweaks;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+@Mod(modid = FatWeaks.MODID, version = FatWeaks.VERSION)
+public class FatWeaks
+{
+    public static final String MODID = "fatweaks";
+    public static final String VERSION = "1.0";
+    
+    // Define Items
+    public static Item itemChimicherry;
+    public static Item itemCherrychanga;
+    public static Item itemChimicherrychanga;
+    
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent preInitEvent) {
+    	/// Register Items/Blocks
+
+    	// Chimicherry?
+    	itemChimicherry = new ItemChimicherry();
+        GameRegistry.registerItem(itemChimicherry, "chimicherry");
+        // Cherrychanga?
+    	itemCherrychanga = new ItemCherrychanga();
+        GameRegistry.registerItem(itemCherrychanga, "cherrychanga");
+        // Chimicherrychanga?
+        itemChimicherrychanga = new ItemChimicherrychanga();
+        GameRegistry.registerItem(itemChimicherrychanga, "chimicherrychanga");
+        
+    }
+    
+    @EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+		// some example code
+        System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
+        GameRegistry.addShapelessRecipe(new ItemStack(itemCherrychanga), new ItemStack(Blocks.dirt));
+        
+        // They are the same thing
+        GameRegistry.addShapelessRecipe(new ItemStack(itemCherrychanga), new ItemStack(itemChimicherry));
+        GameRegistry.addShapelessRecipe(new ItemStack(itemChimicherry), new ItemStack(itemCherrychanga));
+        GameRegistry.addShapelessRecipe(new ItemStack(itemChimicherrychanga), new ItemStack(itemCherrychanga),new ItemStack(itemChimicherry));
+    }
+}

@@ -1,0 +1,16 @@
+package cades.fatweaks;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemFood;
+
+public class ItemChimmycherry extends ItemFood {
+	
+	public ItemChimmycherry(){
+		super(6,true);
+		setMaxStackSize(64);
+		setCreativeTab(CreativeTabs.tabMisc);
+		setUnlocalizedName("cherrychanga");
+		setTextureName("fatweaks:cherrychanga");
+	}
+	
+}

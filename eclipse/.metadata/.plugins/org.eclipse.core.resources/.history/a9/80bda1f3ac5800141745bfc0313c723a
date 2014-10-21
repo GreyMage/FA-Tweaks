@@ -1,0 +1,7 @@
+package cades.fatweaks;
+
+import net.minecraft.item.ItemFood;
+
+public class ItemChickenAndWaffles extends ItemFood {
+
+}

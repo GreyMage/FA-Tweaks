@@ -1,0 +1,16 @@
+[
+{
+  "modid": "fatweaks",
+  "name": "Fermented Apples Tweaks",
+  "description": "FA's Custom tweak/recipe pack",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ExampleDude"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
