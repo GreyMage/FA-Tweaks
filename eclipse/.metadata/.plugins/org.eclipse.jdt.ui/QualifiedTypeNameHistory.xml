@@ -10,4 +10,5 @@
 <fullyQualifiedTypeName name="cades.fatweaks.ItemChimmycherry"/>
 <fullyQualifiedTypeName name="net.minecraftforge.oredict.ShapelessOreRecipe"/>
 <fullyQualifiedTypeName name="cades.fatweaks.ItemChickenAndWaffles"/>
+<fullyQualifiedTypeName name="net.minecraftforge.common.ForgeChunkManager"/>
 </qualifiedTypeNameHistroy>
